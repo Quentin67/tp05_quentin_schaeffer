@@ -76,8 +76,19 @@ $app->get('/api/catalogue', function (Request $request, Response $response, $arg
     return $response;
 });
 
-$app->delete('/api/produit/{id}', function ($id) {
-    //Delete book identified by $id
+$app->delete('/api/produit/{id}', function (Request $request, Response $response, $args) {
+    //on supprime le produit d'id donné
+    $id = $args['id'];
+    $response->getBody()->write('Produit supprimé');
+    return $response;
+});
+
+$app->put('/api/produit/{id}', function(Request $request, Response $response, $args){
+    //on modifie le produit d'id donné
+    $id = $args['id'];
+    $response->getBody()->write('Produit modifié');
+    return $response;
+
 });
 
 
