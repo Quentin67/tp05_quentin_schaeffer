@@ -78,7 +78,7 @@ final class Versions
   'tuupola/callable-handler' => '1.1.0@0bc7b88630ca753de9aba8f411046856f5ca6f8c',
   'tuupola/http-factory' => '1.3.0@aa48841a9f572b9cebe9d3ac5d5d3362a83f57ac',
   'tuupola/slim-jwt-auth' => '3.5.1@1c3668deebbcbdc49c9abe6cce4f6e0c8c5e09b5',
-  '__root__' => '1.0.0+no-version-set@',
+  '__root__' => 'dev-master@bc949cd63a92d8bd327bf09c85be341074635250',
 );
 
     private function __construct()

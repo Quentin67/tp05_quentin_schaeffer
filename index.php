@@ -76,6 +76,10 @@ $app->get('/api/catalogue', function (Request $request, Response $response, $arg
     return $response;
 });
 
+$app->delete('/api/produit/{id}', function ($id) {
+    //Delete book identified by $id
+});
+
 
 $app->get('/api/client/{id}', function (Request $request, Response $response, $args) {
     $array = [];
@@ -126,9 +130,10 @@ $app->post('/api/register', function (Request $request, Response $response, $arg
     $response->getBody()->write(json_encode($dataFormatted));
   
     return $response;
-  });
+});
 
 
 // Chargement du Middleware
+$app->addErrorMiddleware(true, true, true);
 $app->add(new Tuupola\Middleware\JwtAuthentication($options));
 $app->run ();
